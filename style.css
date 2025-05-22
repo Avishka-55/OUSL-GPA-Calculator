@@ -155,31 +155,3 @@ h1 {
   word-break: break-word;
 }
 
-/* Footer styling */
-.footer {
-  position: static;
-  margin: 0px auto 20px;
-  font-size: 1.2rem;      /* smaller font */
-  color: #25334d;
-  font-weight: 500;       /* lighter weight */
-  text-align: center;
-  max-width: 550px;       /* match your card width */
-  background: #faf6ef;
-  padding: 6px 16px;      /* less padding */
-  border-radius: 12px;
-  box-shadow: 0 2px 8px #00000011; /* softer shadow */
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  user-select: none;
-  width: 97vw;
-  box-sizing: border-box;
-  line-height: 1.3;
-}
-
-.footer a {
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
