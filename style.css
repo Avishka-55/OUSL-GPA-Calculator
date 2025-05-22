@@ -55,6 +55,13 @@ h1 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
+  /* FIX: Add min/max width and hide overflow */
+  min-width: 120px;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
 }
 .file-btn input[type=file] {
   opacity: 0;
@@ -74,12 +81,12 @@ h1 {
   padding: 11px 18px;
   border-radius: 0 8px 8px 0;
   min-width: 128px;
+  max-width: 180px;
   box-sizing: border-box;
   display: inline-block;
   overflow-x: auto;
   white-space: nowrap;
 }
-
 .desc {
   color: #1b2f44;
   font-size: 1.07rem;
@@ -122,6 +129,9 @@ h1 {
   box-shadow: 0 2px 8px #36ba6b24;
   width: 100%;
   display: block;
+}
+.calc-btn:hover {
+  background: #219150;
 }
 #result {
   margin-top: 34px;
