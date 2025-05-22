@@ -8,10 +8,6 @@ document.getElementById('fileInput').addEventListener('change', function (e) {
   }
 });
 
-document.getElementById('browseBtn').addEventListener('click', function () {
-  document.getElementById('fileInput').click();
-});
-
 document.getElementById('calculateBtn').addEventListener('click', function () {
   const fileInput = document.getElementById('fileInput');
   const file = fileInput.files[0];
