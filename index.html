@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GPA Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gpa-card">
+    <h1>GPA Calculator</h1>
+    <form id="gpaForm" autocomplete="off" onsubmit="return false;">
+      <label class="main-label">Upload Result Sheet (Excel XLS/XLSX):</label>
+      <div class="file-row">
+        <label class="file-btn">
+          Choose File
+          <input type="file" id="fileInput" accept=".xlsx,.xls">
+        </label>
+        <span id="fileLabelText" class="file-chosen">No file chosen</span>
+      </div>
+      <button type="button" id="browseBtn" class="browse-btn">Browse</button>
+      <div class="desc">
+        Default codes are included; you can add or remove as needed.
+      </div>
+      <label for="nongpaInput" class="main-label">
+        Non-GPA Course Codes <span class="sub">(comma-epv)</span>
+      </label>
+      <input type="text" id="nongpaInput" 
+        value="CYE3200,FNE3000,FDE3020,LTE3401"
+        class="nongpa-box"
+        placeholder="e.g. CYE3200,FNE3000,FDE3020,LTE3401">
+      <button type="button" id="calculateBtn" class="calc-btn">Calculate GPA</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
