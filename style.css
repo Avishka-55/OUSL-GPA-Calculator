@@ -79,24 +79,7 @@ h1 {
   overflow-x: auto;
   white-space: nowrap;
 }
-.browse-btn {
-  margin: 18px 0 13px 0;
-  width: fit-content;
-  background: #36ba6b;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.12rem;
-  border-radius: 8px;
-  border: none;
-  padding: 12px 31px;
-  cursor: pointer;
-  transition: background 0.18s;
-  box-shadow: 0 2px 8px #36ba6b22;
-  display: block;
-}
-.browse-btn:hover, .calc-btn:hover {
-  background: #219150;
-}
+
 .desc {
   color: #1b2f44;
   font-size: 1.07rem;
