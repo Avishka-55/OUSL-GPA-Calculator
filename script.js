@@ -68,11 +68,11 @@ function calculateGPA(courses, nonGpaCourses) {
   });
 
   if (totalCredits === 0) {
-    return 'Error: No GPA courses available or data is invalid';
+    return { error: 'Error: No GPA courses available or data is invalid' };
   }
 
   const gpa = (weightedGradePoints / totalCredits).toFixed(3);
-  return gpa;
+  return { gpa, totalCredits };
 }
 
 function getGradePoint(grade) {
@@ -112,13 +112,31 @@ function getClassFromGPA(gpa) {
   }
 }
 
-function displayResult(gpa) {
+function displayResult(result) {
   const resultDiv = document.getElementById('result');
-  if (typeof gpa === 'string' && gpa.startsWith('Error')) {
-    resultDiv.innerHTML = `<span style="color:#c0392b;">${gpa}</span>`;
+  if (result.error) {
+    resultDiv.innerHTML = `<span style="color:#c0392b;">${result.error}</span>`;
   } else {
-    const gpaValue = parseFloat(gpa);
+    const gpaValue = parseFloat(result.gpa);
     const className = getClassFromGPA(gpaValue);
-    resultDiv.innerHTML = `<span>Your GPA is: <b>${gpa}</b><br>Class: <b>${className}</b></span>`;
+    resultDiv.innerHTML = `<span style="
+  display: inline-block;
+  background-color: #fff9f0;
+  border-left: 6px solid #FFB347;
+  padding: 16px 24px;
+  font-family: 'Arial Rounded MT', sans-serif;
+  font-size: 16px;
+  color: #444;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+">
+  🏆 <b style="color:blue;">Your GPA Breakdown</b><br><br>
+  ✅ Total Credits Counted: <b style="color:#F4C430;">${result.totalCredits}</b><br>
+  📊 Final GPA Score: <b style="color:#F4C430;">${result.gpa}</b><br>
+  🏅 Awarded Class: <b style="color:#F4C430;">${className}</b>
+</span>
+
+`;
   }
 }
