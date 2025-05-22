@@ -107,8 +107,12 @@ function getClassFromGPA(gpa) {
     return "Second Class Upper";
   } else if (gpa >= 3.0) {
     return "Second Class Lower";
+  } else if (gpa >= 2.0) {
+    return "General Pass";
+  } else if (gpa >= 0) {
+    return "Below Pass";
   } else {
-    return "No Class";
+    return "Invalid GPA";
   }
 }
 
