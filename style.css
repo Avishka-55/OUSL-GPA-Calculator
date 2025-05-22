@@ -4,12 +4,15 @@ body {
   margin: 0;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 80px; /* to avoid footer overlap */
 }
+
 .gpa-card {
   background: #faf6ef;
-  margin: 60px auto;
+  margin: 60px auto 20px;
   padding: 44px 40px 38px 40px;
   border-radius: 36px;
   box-shadow: 0 8px 32px #0001;
@@ -20,6 +23,7 @@ body {
   flex-direction: column;
   align-items: stretch;
 }
+
 h1 {
   margin-top: 0;
   margin-bottom: 22px;
@@ -29,6 +33,7 @@ h1 {
   letter-spacing: 1px;
   text-align: left;
 }
+
 .main-label {
   font-size: 1.12rem;
   font-weight: 600;
@@ -37,11 +42,13 @@ h1 {
   display: block;
   margin-top: 16px;
 }
+
 .file-row {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
 }
+
 .file-btn {
   background: #ffb94c;
   color: #fff;
@@ -55,23 +62,22 @@ h1 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
-  /* FIX: Add min/max width and hide overflow */
-  min-width: 120px;
-  max-width: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: center;
 }
-.file-btn input[type=file] {
+
+.file-btn input[type='file'] {
   opacity: 0;
   position: absolute;
-  left: 0; top: 0; width: 100%; height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
+
 .file-btn:hover {
   background: #ffa726;
 }
+
 .file-chosen {
   background: #f6fafc;
   border: 1.5px solid #ffb94c;
@@ -81,23 +87,25 @@ h1 {
   padding: 11px 18px;
   border-radius: 0 8px 8px 0;
   min-width: 128px;
-  max-width: 180px;
   box-sizing: border-box;
   display: inline-block;
   overflow-x: auto;
   white-space: nowrap;
 }
+
 .desc {
   color: #1b2f44;
   font-size: 1.07rem;
   margin-bottom: 6px;
   margin-top: 4px;
 }
+
 .sub {
   color: #444e60;
   font-size: 1.01rem;
   font-weight: 400;
 }
+
 .nongpa-box {
   font-size: 1.09rem;
   width: 100%;
@@ -111,10 +119,12 @@ h1 {
   transition: border-color 0.2s;
   font-family: inherit;
 }
+
 .nongpa-box:focus {
   border-color: #36ba6b;
   outline: none;
 }
+
 .calc-btn {
   background: #36ba6b;
   color: #fff;
@@ -130,9 +140,7 @@ h1 {
   width: 100%;
   display: block;
 }
-.calc-btn:hover {
-  background: #219150;
-}
+
 #result {
   margin-top: 34px;
   font-size: 1.18rem;
@@ -144,5 +152,34 @@ h1 {
   box-shadow: 0 2px 8px #36ba6b14;
   text-align: center;
   font-weight: 600;
-  word-break: break-all;
+  word-break: break-word;
+}
+
+/* Footer styling */
+.footer {
+  position: static;
+  margin: 0px auto 20px;
+  font-size: 1.2rem;      /* smaller font */
+  color: #25334d;
+  font-weight: 500;       /* lighter weight */
+  text-align: center;
+  max-width: 550px;       /* match your card width */
+  background: #faf6ef;
+  padding: 6px 16px;      /* less padding */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00000011; /* softer shadow */
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  user-select: none;
+  width: 97vw;
+  box-sizing: border-box;
+  line-height: 1.3;
+}
+
+.footer a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
