@@ -49,10 +49,11 @@ function calculateGPA(courses, nonGpaCourses) {
     const code = course['Course Code'] ? course['Course Code'].toUpperCase() : '';
     const grade = course['Grade'];
 
-    if (!grade || grade === '-' || grade.toLowerCase() === 'pending' ||
+     if (!grade || grade === '-' || grade.toLowerCase() === 'pending' || grade.toLowerCase() === 'rx' || grade.toLowerCase() === 'fa' ||
         grade.toLowerCase() === 'n/a' || grade.toLowerCase() === 'p') {
       return;
     }
+
 
     if (nonGpaCourses.includes(code)) {
       return;
