@@ -72,7 +72,7 @@ function calculateGPA(courses, nonGpaCourses) {
     return { error: 'Error: No GPA courses available or data is invalid' };
   }
 
-  const gpa = (weightedGradePoints / totalCredits).toFixed(3);
+  const gpa = (weightedGradePoints / totalCredits).toFixed(4);
   return { gpa, totalCredits };
 }
 
