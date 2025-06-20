@@ -18,7 +18,7 @@ This tool helps you **calculate your GPA instantly** by reading your result shee
 
 ## 🧠 How It Works
 
-1. Go to [MyOUSL](https://myousl.ou.ac.lk) and download your result sheet.
+1. Go to [MyOUSL](http://myousl.ou.ac.lk) and download your result sheet.
 2. Upload the file to this app.
 3. Boom 💥 Your GPA is instantly calculated and displayed.
 
