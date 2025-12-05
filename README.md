@@ -1,5 +1,11 @@
 # 🎓 GPA Calculator for OUSL Students
 
+## 🌐 Live Demo
+
+👉 Try the App  https://avishka-55.github.io/OUSL-GPA-Calculator/
+
+---
+
 🚀 **Just launched!** This is a simple and fast GPA Calculator web app built specifically for **B.Sc. Natural Science students** at the **Open University of Sri Lanka (OUSL)**.
 
 ## 💡 What It Does
@@ -47,11 +53,7 @@ The app assumes course codes follow a pattern like: `ABC4301`
 
 ---
 
-## 🌐 Live Demo
 
-👉 Try the App  https://avishka-55.github.io/OUSL-GPA-Calculator/
-
----
 
 ## 📢 Disclaimer
 
