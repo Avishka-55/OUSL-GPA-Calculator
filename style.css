@@ -2,8 +2,6 @@ body {
   background: #fcdba1;
   min-height: 100vh;
   margin: 0;
-  width: 0;
-  height: 0;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   display: flex;
   align-items: center;
